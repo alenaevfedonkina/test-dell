@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: "circe-bold";
+    src: url(../fonts/circe-bold.ttf);
+}
+@font-face{
+    font-family: "Euclid Circular A - light";
+    src: url(../fonts/Euclid\ Circular\ A\ Light.ttf);
+}
+@font-face{
+    font-family: "Euclid Circular A - bold";
+    src: url(../fonts/Euclid\ Circular\ A\ Bold.ttf);
+}
+
+:root {
+    --font: 'Roboto', sans-serif;
+    --main-color: #292D32;
+    --gray-color: #838383;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: var(--font);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+    padding: 15px;
+}
+
+.header-menu,
+.header-menu-burger {
+    display: none;
+}
+
+.header-menu-burger a li {
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.header-contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important
+}
+
+.icons-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    background-color: #F9F9F9;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.transparent {
+    background-color: #ffffff00;
+}
+
+.ellipse-header img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3F3F3F80;
+    backdrop-filter: blur(3px);
+    display: none;
+    z-index: 3;
+}
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.burger span,
+span::after,
+span::before {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 1.9px;
+    background-color: var(--main-color);
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.burger span {
+    top: 7px;
+    right: -10px;
+}
+
+.burger span::after {
+    content: "";
+    top: -8px;
+    right: 0;
+
+}
+
+.burger span::before {
+    content: "";
+    top: -16px;
+}
+
+#burger-checkbox {
+    display: none;
+}
+
+#burger-checkbox:checked~.burger span {
+    transform: rotate(45deg);
+    top: 0;
+    transition: all 0.3s;
+}
+
+
+#burger-checkbox:checked~.burger span:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1.5px;
+    background-color: var(--main-color);
+    transform: rotate(90deg);
+    top: 0;
+    transition: all 0.3s;
+}
+
+#burger-checkbox:checked~.burger span:after {
+    visibility: hidden;
+}
+
+#burger-checkbox:checked~.header-menu-burger {
+    display: inline;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 40px;
+    z-index: 999;
+}
+
+#burger-checkbox:checked~.overlay {
+    display: block;
+}
+
+.blue-ellipse {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #48A4EB;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px 4px 1px 5px;
+    top: 22px;
+    right: 77px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.second-section {
+    background-color: #F2F2F2;
+}
+
+.new-arrival-img {
+    text-align: center;
+}
+
+.new-arrival {
+    margin-bottom: 28px;
+}
+
+.new-arrival p {
+    font-size: 15px;
+    color: var(--gray-color);
+    font-weight: 300;
+    margin: -17px 0 5px 0;
+}
+
+.new-arrival span {
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-bottom: 28px;
+}
+
+.circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "circe-bold";
+    width: 45px;
+    height: 45px;
+    font-size: 18.74px;
+    font-weight: 700;
+    background-color: #33A9FF;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 15px;
+    border: none;
+}
+
+.more {
+    color: var(--main-color);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 20%;
+    height: 100%;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 60%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #D0D0D0;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--main-color);
+    width: 5px;
+    height: 5px;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    left: 150%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+}
+
+.third-section {
+    background-color: #F9F9F9;
+}
+
+.good-offer {
+    display: flex;
+    position: relative;
+}
+
+.good-offer p {
+    font-size: 20px;
+    font-weight: 400;
+    width: 136px;
+    margin: 44px 0;
+    color: var(--main-color);
+}
+
+.good-offer img {
+    position: absolute;
+    right: -11px;
+}
+
+.title-product-catalog {
+    margin-bottom: 30px;
+
+}
+
+.title-product-catalog p {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 105px 96px 20px 0;
+    color: var(--main-color);
+}
+
+.title-product-catalog span {
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--gray-color);
+    margin-right: 10px;
+    line-height: 22.5px;
+    margin-bottom: 30px;
+}
+
+.in-catalog {
+    margin-bottom: 40px;
+}
+
+.card-catalog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 345px;
+    height: 275px;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    padding: 15px 20px;
+    margin-bottom: 21px;
+}
+
+.card-catalog p {
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--main-color);
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.quantities-product {
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--gray-color);
+    margin-bottom: 2px;
+}
+
+.name-product {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.card-catalog img {
+    position: absolute;
+}
+
+.second-img {
+    top: 7px;
+    right: 22px;
+}
+
+.third-img {
+    top: 73px;
+    right: 46px;
+}
+
+.four-img {
+    top: 44px;
+    right: 62px;
+}
+
+.five-img {
+    top: 26px;
+    right: 22px;
+}
+
+.card-contain {
+    margin-bottom: 105px;
+}
+
+.five-section {
+    background-color: #F2F2F2;
+}
+
+.title-benefits p {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-top: 86px;
+}
+
+.title-benefits span {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+    margin-right: 9px;
+}
+.crossing span{
+    display: inline;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--main-color);
+}
+.title-benefits{
+    margin-bottom: 35px;
+}
+.img-benefits{
+    display: flex;
+    position: relative;
+}
+.img-benefits img:nth-child(2){
+    position: absolute;
+    top: -92px;
+    right: -15px;
+}
+.contain-3{
+    margin-bottom: 23px;
+}
+.dark-card-icons{
+    display: flex;
+    justify-content: space-between;
+}
+.img-wrapp{
+  
+    width: 50px;
+    height: 50px;
+    background-color: #343A41;
+    border-radius: 9px;
+    margin: 15px;  
+    padding: 10px 9px 9px 10px;
+}
+.dark-card{
+    width: 345px;
+    height: 211px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    margin-bottom: 20px;
+}
+.about-dark-card {
+    width: 319px;
+    padding: 0 30px 15px 15px;
+}
+.about-dark-card p{
+    font-family: "Euclid Circular A - bold" ;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    width: 211px;
+}
+.about-dark-card span {
+    font-family: "Euclid Circular A - light" ;
+    font-size: 16px;
+    font-weight: 300;
+    color: #B7B7B7;
+    line-height: 20px;
+}

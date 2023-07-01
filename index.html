@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style/style.css">
+    <title>Тестовое задание Федонькина Алена</title>
+</head>
+
+<body>
+
+    <header class="head first-secction">
+        <div class="wrapper head__wrapper">
+            <div class="header-contain">
+                <div class="header-menu-contain">
+                    <img src="/src/img/image 7.svg" alt="Логотип" />
+                    <ul class="header-menu">
+                        <a href="#">
+                            <li class="header-list">Главная</li>
+                        </a>
+                        <a href="#">
+                            <li class="header-list">Каталог</li>
+                        </a>
+                        <a href="#">
+                            <li class="header-list">Новости</li>
+                        </a>
+                        <a href="#">
+                            <li class="header-list">Наш АСЦ</li>
+                        </a>
+                        <a href="#">
+                            <li class="header-list">Контакты</li>
+                        </a>
+                    </ul>
+                    <img class="hidden" src="/src/img/clarity_shopping-bag-line.svg" alt="" />
+                </div>
+                <div class="icons-contain">
+                    <span class="ellipse-header transparent"><img src="/src/img/clarity_shopping-bag-line.svg"
+                            alt="" /></span>
+                    <span class="ellipse-header"><img src="/src/img/Group 31.svg" alt="" /></span>
+                    <span class="ellipse-header hidden"><img src="/src/img/clarity_shopping-bag-line3.svg"
+                            alt="" /></span>
+                    <span class="ellipse-header hidden"><img src="/src/img/Vector (1).svg" alt="" /></span>
+                    <span class="ellipse-header"><img src="/src/img/clarity_shopping-bag-line (1).svg" alt="" />
+                        <span class="blue-ellipse">3</span>
+                    </span>
+                    <span class="ellipse-header">
+                        <input type="checkbox" id="burger-checkbox">
+                        <label for="burger-checkbox" class="burger">
+                            <span></span>
+                        </label>
+                        <div class="overlay"></div>
+                        <ul class="header-menu-burger">
+                            <a href="#">
+                                <li class="header-list">Главная</li>
+                            </a>
+                            <a href="#">
+                                <li class="header-list">Каталог</li>
+                            </a>
+                            <a href="#">
+                                <li class="header-list">Новости</li>
+                            </a>
+                            <a href="#">
+                                <li class="header-list">Наш АСЦ</li>
+                            </a>
+                            <a href="#">
+                                <li class="header-list">Контакты</li>
+                            </a>
+                        </ul>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="second-section">
+        <div class="contain">
+
+
+            <div class="wrapper second-section__wrapper ">
+                <div class="contain-2">
+                    <div class="new-arrival">
+                        <div class="new-arrival-img">
+                            <img src="/src/img/Dell.svg" alt="" />
+                        </div>
+                        <p>Новое поступление</p>
+                        <span>Лучшие товары от компании Dell</span>
+                        <div class="crossing more-info"><button class="circle">→</button><span
+                                class="more">Подробнее</span></div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="/src/img/Новое фото.svg" alt="Slide" />
+                        <img src="/src/img/Новое фото.svg" alt="Slide" />
+                        <img src="/src/img/Новое фото.svg" alt="Slide" />
+                        <img src="/src/img/Новое фото.svg" alt="Slide" />
+                        <img src="/src/img/Новое фото.svg" alt="Slide" />
+                    </div>
+
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <a class="next" onclick="nextSlide()"><img src="/src/img/Vector 2 (2).svg" alt=""></a>
+                    </div>
+
+
+                </div>
+            </div>
+            <section class="third-section">
+                <div class="wrapper">
+                    <div class="good-offer">
+                        <p>Выгодное предложение
+                            от Dell</p>
+                        <img src="/src/img/image 23.svg" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="four-section">
+        <div class="wrapper">
+            <div class="card-contain">
+                <div class="title-product-catalog">
+                    <p>Каталог товаров от Dell</p>
+                    <span>Наша компания является зарегистрированным и официальным партнером Dell в России.</span>
+                    <div class="crossing in-catalog"><button class="circle">→</button><span class="more">В
+                            каталог</span></div>
+                </div>
+
+
+                <div class="card-catalog">
+                    <p>01</p>
+                    <img class="first-img" src="/src/img/image 31.svg" alt="">
+                    <div class="about-product"><span class="quantities-product">105 товаров</span>
+                        <span class="name-product">Ноутбуки</span>
+                    </div>
+                </div>
+                <div class="card-catalog light">
+                    <p>02</p>
+                    <img class="second-img" src="/src/img/image 10.svg" alt="">
+                    <div class="about-product"><span class="quantities-product">65 товаров</span>
+                        <span class="name-product">Персональные компьютеры</span>
+                    </div>
+                </div>
+                <div class="card-catalog">
+                    <p>03</p>
+                    <img class="third-img" src="/src/img/image 26 1.svg" alt="">
+                    <div class="about-product"><span class="quantities-product">13 товаров</span>
+                        <span class="name-product">Cерверы</span>
+                    </div>
+                </div>
+                <div class="card-catalog light">
+                    <p>04</p>
+                    <img class="four-img" src="/src/img/image 28.svg" alt="">
+                    <div class="about-product"><span class="quantities-product">2345 товаров</span>
+                        <span class="name-product">Dell EMC</span>
+                    </div>
+                </div>
+                <div class="card-catalog">
+                    <p>05</p>
+                    <img class="five-img" src="/src/img/image 33.svg" alt="">
+                    <div class="about-product"><span class="quantities-product">195 товаров</span>
+                        <span class="name-product">Запасные части к Dell EMC</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="five-section">
+        <div class="wrapper first-secction__wrapper">
+            <div class="contain-3">
+                <div class="title-benefits">
+                    <p>Наши преимущества</p>
+                    <span>Оптимизация мощностей (расходов, социальных выплат и т.п.) позволили компании на 4,7% понизить
+                        цены по сравнению с конкурентами</span>
+                    <div class="crossing leave-request"><button class="circle">→</button><span class="more">Оставить
+                            заявку</span></div>
+                </div>
+
+
+                <div class="img-benefits">
+                    <img src="/src/img/best quality.svg" alt="" />
+                    <img src="/src/img/image 45.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="dark-card-contain">
+                <div class="dark-card">
+                    <div class="dark-card-icons">
+                        <div class="img-wrapp"><img src="/src/img/Иконка.svg" alt="icon" /></div>
+                        <div class="blue-line">
+                            <img src="/src/img/Vector 34.svg" alt="line" />
+                        </div>
+
+
+                    </div>
+                    <div class="about-dark-card">
+
+
+                        <p>У нас самые выгодные
+                            и низкие цены </p>
+                        <span>В наличии широкий ассортимент,
+                            а также доступные цены
+                            на ноутбуки Dell </span>
+                    </div>
+
+                </div>
+                <div class="dark-card">
+                    <div class="dark-card-icons">
+                        <div class="img-wrapp"><img src="/src/img/verify.svg" alt="icon" /></div>
+                        <div class="blue-line">
+                            <img src="/src/img/Vector 34.svg" alt="line" />
+                        </div>
+
+
+                    </div>
+                    <div class="about-dark-card">
+
+
+                        <p>Авторизованный сервисный центр DELL</p>
+                        <span>Сертифицированный сервисный центр по ремонту техники Dell в России и странах СНГ </span>
+                    </div>
+
+                </div>
+                <div class="dark-card">
+                    <div class="dark-card-icons">
+                        <div class="img-wrapp"><img src="/src/img/people.svg" alt="icon" /></div>
+                        <div class="blue-line">
+                            <img src="/src/img/Vector 34.svg" alt="line" />
+                        </div>
+
+
+                    </div>
+                    <div class="about-dark-card">
+
+
+                        <p>Высокий уровень технической экспертизы </p>
+                        <span>Мы прошли аттестацию в виде тестирования, где показали высокий уровень знаний </span>
+                    </div>
+
+                </div>
+                <div class="dark-card">
+                    <div class="dark-card-icons">
+                        <div class="img-wrapp"><img src="/src/img/Иконка (1).svg" alt="icon" /></div>
+                        <div class="blue-line">
+                            <img src="/src/img/Vector 34.svg" alt="line" />
+                        </div>
+
+
+                    </div>
+                    <div class="about-dark-card">
+
+
+                        <p>Мы являемся официальным партнером DELL </p>
+                        <span>Мы лучший официальный поставщик продукции DELL в России 
+                            и странах СНГ </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="/src/js/app.js"></script>
+</body>
+
+</html>

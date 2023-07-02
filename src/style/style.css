@@ -502,7 +502,8 @@ span::before {
 .contain-all-news {
     margin-bottom: 40px;
 }
-.dark{
+
+.dark {
     width: 40px;
     height: 40px;
     background-color: var(--main-color);
@@ -510,6 +511,62 @@ span::before {
     font-size: 18px;
     margin-right: 0;
 }
-.image-news img{
+
+.image-news img {
     border-radius: 45px 0;
+
+}
+
+.card-news {
+    position: relative;
+}
+
+.title-news {
+    position: absolute;
+    top: 133px;
+    background-color: white;
+    border-radius: 0 82px 0 0;
+    width: 248px;
+    padding-top: 20px;
+}
+
+.title-news p {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.lets-news {
+    position: absolute;
+    top: 159px;
+    right: 35px;
+}
+
+.contain-contact-title {
+    display: flex;
+}
+.contain-contact-title img{
+    margin-right: 9px;
+}
+
+.contain-contact-title span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--gray-color);
+}
+.contacts p{
+    margin-left: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.contacts{
+    margin-bottom: 30px;
+}
+.seven-section{
+    background-color: #F9F9F9;
 }
